@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Teach U by Rocio</title>
+		<link href="style/index.css" rel="stylesheet">
+		<script src="scripts/functions.js" defer></script>
+		<script src="scripts/main.js" defer></script>
+	</head>
+	
+	<body>
+		<div class="banniere">
+			<h1>Teach U by Rocio</h1>
+		</div>
+
+		<form method="get" action="">
+			<fieldset>
+				<legend>Student details</legend>
+				<p>
+					<label for="student">Your name</label> : <input type="text" name="name" id="student">
+				</p>
+				<p>
+					<label for="mail">Your email</label> : <input type="text" name="mail" id="mail">
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend>Set your appointment</legend>
+				<p>
+					<label for="teacher">Choose your teacher</label>
+					<select name="teacher" id="teacher" required>
+						<option value="Rocio">Rocio</option>
+						<option value="Carolina">Carolina</option>
+						<option value="Gisele">Gisele</option>
+					</select>
+				</p>
+				<p>
+					<label for="date">Choose a schedule for your class</label>
+					<input type="date" id="date" name="class-schedule" required>
+				</p>
+				<p>
+					<label for="time">At what time ?</label>
+					<input type="time" id="time" name="time" required>
+				</p>
+				<p>
+					<button id="send">Send</button>
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

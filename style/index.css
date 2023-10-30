@@ -1,0 +1,25 @@
+.banniere{
+	background-image: url("../images/United-Kingdom-Flag.png");
+	background-size: cover;
+	padding: 10px; /*marge intérieure*/
+}
+h1{
+	font-size: 3em; /*taille relative (taille normale = 1em)*/
+	font-family: Helvetica;
+	text-align: center;
+	color: yellow;
+	text-shadow: 2px 2px 2px black;
+}
+fieldset{
+	background-color:aquamarine;
+	border: 2px solid black;
+	border-radius: 6px;
+	margin: 10px;
+}
+legend{
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 6px;
+	padding: 4px;
+}
+
