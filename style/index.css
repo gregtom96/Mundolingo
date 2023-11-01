@@ -3,6 +3,26 @@
 	background-size: cover;
 	padding: 10px; /*marge intérieure*/
 }
+ul{
+	display: flex;
+	justify-content: center;
+}
+li{
+	list-style-type: none; 	/*suppression des puces*/
+	margin: 0px 10px;		/*1ère valeur: marges extérieures haut et bas
+							2ème valeur marges extérieures droite et gauche*/
+	padding: 10px;
+	border: 2px black solid;
+	border-radius: 6px;
+	background-color: aquamarine;
+}
+li:hover{
+	background-color: white;
+}
+a{
+	color:black;
+	text-decoration: none;
+}
 h1{
 	font-size: 3em; /*taille relative (taille normale = 1em)*/
 	font-family: Helvetica;
