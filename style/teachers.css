@@ -1,0 +1,46 @@
+.banniere{
+	background-image: url("../images/United-Kingdom-Flag.png");
+	background-size: cover;
+	padding: 10px; /*marge intérieure*/
+}
+ul{
+	display: flex;
+	justify-content: center;
+}
+li{
+	list-style-type: none; 	/*suppression des puces*/
+	margin: 0px 10px;		/*1ère valeur: marges extérieures haut et bas
+							2ème valeur marges extérieures droite et gauche*/
+	padding: 10px;
+	border: 2px black solid;
+	border-radius: 6px;
+	background-color: aquamarine;
+}
+li:hover{
+	background-color: white;
+}
+a{
+	color:black;
+	text-decoration: none;
+}
+h1{
+	font-size: 3em; /*taille relative (taille normale = 1em)*/
+	font-family: Helvetica;
+	text-align: center;
+	color: yellow;
+	text-shadow: 2px 2px 2px black;
+}
+main{
+    background-color:aquamarine;
+	border: 2px solid black;
+	border-radius: 6px;
+    padding: 10px;
+}
+img{
+    max-width: 20%; /*occupe 20% du conteneur*/
+    height: auto; /*pour conserver les proportions*/
+    border: 2px dashed black;
+}
+.flotte{
+    float: bottom;
+}
