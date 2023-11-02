@@ -34,13 +34,29 @@ main{
     background-color:aquamarine;
 	border: 2px solid black;
 	border-radius: 6px;
-    padding: 10px;
+    padding: 10px; /*marge intérieure*/
+}
+article{
+	background-color: white;
+	width: 50%;
+	margin: 10px 10px;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+/*pour que le cadre de l'article englobe la photo même
+si il n'y a pas assez de texte*/
+article::after{
+	content:"";
+	display: block;
+	clear: both;
 }
 img{
-    max-width: 20%; /*occupe 20% du conteneur*/
-    height: auto; /*pour conserver les proportions*/
-    border: 2px dashed black;
-}
-.flotte{
-    float: bottom;
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+	border-radius: 50%;
+	float: left;
+	shape-outside: margin-box;
+	margin: 0 20px 5px 0;
 }
