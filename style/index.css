@@ -39,12 +39,6 @@ main{
 .appointment{
 	grid-column: 1/3;
 }
-.button{
-	text-align: center;
-}
-.send{
-	text-align: left;
-}
 section{
 	background-color:aquamarine;
 	border: 2px solid black;
