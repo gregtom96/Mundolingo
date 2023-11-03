@@ -35,6 +35,7 @@ main{
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 10px;
+	background-color: black;
 }
 .appointment{
 	grid-column: 1/3;
