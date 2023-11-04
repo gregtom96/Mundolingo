@@ -4,69 +4,26 @@
 		<meta charset="utf-8" />
 		<title>Teach U by Rocio</title>
 		<link href="style/index.css" rel="stylesheet">
-		<script src="scripts/functions.js" defer></script>
-		<script src="scripts/main.js" defer></script>
 	</head>
 	
 	<body>
-		<div class="banniere">
-			<h1>Teach U by Rocio</h1>
-		</div>
-		<nav>
-			<ul>
-				<li>
-					<a href="index.html">Home</a>
-				</li>
-				<li>
-					<a href="pages/teachers.html">Meet your teachers</a>
-				</li>
-			</ul>
-		</nav>
 		<main>
-			<section class="register">
+			<div class="title">
+				<h1>Teach U By Rocio</h1>
+				<h2>Travel. Communicate. Share.</h2>
+			</div>
+			<section>
+				<h2>Log in</h2>
 				<p>
-					<label for="student">Your name</label> : <input type="text" name="name" id="student">
-				</p>
-				<p>
-					<label for="mail">Your email</label> : <input type="text" name="mail" id="mail">
-				</p>
-				<p class="button register">
-					<button>Register</button>
-				</p>
-			</section>
-			<section class="login">
-				<p>
-					<label for="login">Login</label> : <input type="text" name="login" id="login">
+					<label for="login">Id :</label><input type="text" name="login" id="login">
 				</p>
 				<p>
-					<label for="password">Password</label> : <input type="text" name="password" id="password">
+					<label for="password">Password :</label><input type="text" name="password" id="password">
 				</p>
-				<p class="button login">
-					<button>Log in</button>
+				<a href="pages/reservation.html" target="_blank">Enter without login</a>
+				<p class="login_button">
+					<button>Login</button>
 				</p>
-			</section>
-			<section class="appointment">
-				<form method="get" action="">
-					<p>
-						<label for="teacher">Choose your teacher</label>
-						<select name="teacher" id="teacher" required>
-							<option value="Rocio">Rocio</option>
-							<option value="Carolina">Carolina</option>
-							<option value="Gisele">Gisele</option>
-						</select>
-					</p>
-					<p>
-						<label for="date">Choose a schedule for your class</label>
-						<input type="date" id="date" name="class-schedule" required>
-					</p>
-					<p>
-						<label for="time">At what time ?</label>
-						<input type="time" id="time" name="time" required>
-					</p>
-					<p class="button send">
-						<button>Send</button>
-					</p>
-				</form>
 			</section>
 		</main>
 	</body>
