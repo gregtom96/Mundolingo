@@ -1,5 +1,5 @@
 function openEmail(teacherEmail, studentName, classDate, classTime){
-    let mailto = `mailto:${teacherEmail}?subject=Appointment for English class&body=Hi ! I'm ${studentName} and I would like to have a class with you on ${classDate} at ${classTime} Thank you for your confirmation !`
+    let mailto = `mailto:${teacherEmail}?subject=Appointment for English class&body=Hi ! I would like to have a class with you on ${classDate} at ${classTime} Thank you for your confirmation !`
     location.href = mailto
 }
 
@@ -28,9 +28,9 @@ function SendEmail(){
         console.log("Il n'y a pas eu de rechargement de la page")
 
         //On récupère les champs renseignés par l'utilisateur 
-        let baliseName = document.getElementById("student")
-        let studentName = baliseName.value
-        console.log(studentName)
+        let baliseTeacher = document.getElementById("teacher")
+        let teacherName = baliseTeacher.value
+        console.log(teacherName)
         
         let baliseDate = document.getElementById("date")
         let classDate = baliseDate.value
@@ -40,12 +40,8 @@ function SendEmail(){
         let classTime = baliseTime.value
         console.log(classTime)
 
-        let baliseTeacher = document.getElementById("teacher")
-        let teacherName = baliseTeacher.value
-        console.log(teacherName)
-
         let teacherEmail = getTeacherEmail(teacherName)
 
-        openEmail(teacherEmail, studentName, classDate, classTime)
+        openEmail(teacherEmail, classDate, classTime)
     })
 }
