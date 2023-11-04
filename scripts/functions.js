@@ -1,4 +1,4 @@
-function openEmail(teacherEmail, studentName, classDate, classTime){
+function openEmail(teacherEmail, classDate, classTime){
     let mailto = `mailto:${teacherEmail}?subject=Appointment for English class&body=Hi ! I would like to have a class with you on ${classDate} at ${classTime} Thank you for your confirmation !`
     location.href = mailto
 }
