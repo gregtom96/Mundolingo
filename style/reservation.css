@@ -4,13 +4,13 @@ body{
 	background-repeat: repeat-y;
 	margin: 0;
 	padding: 0;
+    color: white;
 }
 h1{
     font-family: "Futura";
 	text-shadow: 3px 3px 3px black;
 	text-align: center;
     font-size: 3em;
-	color: white;
 }
 ul{
 	display: flex;
@@ -22,42 +22,23 @@ li{
 							2ème valeur marges extérieures droite et gauche*/
 	padding: 10px;
 }
+a:visited{
+    color:white;
+}
 main{
     background-color: rgba(0,0,0,0.5);
 	border: 2px solid black;
 	border-radius: 10px;
 	padding: 20px;
 }
+button{
+	background-color: yellow;
+	border-radius: 6px;
+	width:200px;
+	height:50px;
+}
 h2{
     font-family:"Futura";
 	text-shadow: 3px 3px 3px black;
     text-align: center;
-	color:white;
-}
-h3{
-	font-size: 1.3em;
-}
-article{
-	background-color: white;
-	width: 50%;
-	margin: 10px 10px;
-	padding: 10px;
-	border-radius: 10px;
-	box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-}
-/*pour que le cadre de l'article englobe la photo même
-si il n'y a pas assez de texte*/
-article::after{
-	content:"";
-	display: block;
-	clear: both;
-}
-img{
-    width: 200px; 
-    height: 200px; 
-    object-fit: cover;
-	border-radius: 50%;
-	float: left;
-	shape-outside: margin-box;
-	margin: 0 20px 5px 0;
 }
