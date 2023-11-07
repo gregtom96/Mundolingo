@@ -28,6 +28,7 @@ main{
     background-color: rgba(0,0,0,0.5);
 	border: 2px solid black;
 	border-radius: 10px;
+	padding: 20px;
 }
 h2{
     font-family:"Futura";
@@ -40,7 +41,6 @@ h3{
 article{
 	background-color: white;
 	width: 50%;
-	margin: 20px 20px;
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
@@ -67,9 +67,6 @@ img{
 @media screen and (max-width: 1000px){
 	body{
 		background-image: url("../images/fond_mobile.png");
-	}
-	main{
-		padding: 0;
 	}
 	article{
 		width: 90%;
