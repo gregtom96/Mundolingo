@@ -1,5 +1,5 @@
 body{
-	background-image: url("../images/fond.png");
+	background-image: url("../images/fond_pc.png");
 	background-size: cover;
 	background-repeat: repeat-y;
 	margin: 0;
@@ -41,4 +41,11 @@ h2{
     font-family:"Futura";
 	text-shadow: 3px 3px 3px black;
     text-align: center;
+}
+
+/*Responsive design pour affichage sur smartphone*/
+@media screen and (max-width: 1000px){
+	body{
+		background-image: url("../images/fond_mobile.png");
+	}
 }
