@@ -8,16 +8,7 @@
 
     <body>
 		<h1>Teach U by Rocio</h1>
-		<nav>
-			<ul>
-				<li>
-					<a href="reservation.html">Make your reservation</a>
-				</li>
-				<li>
-					<a href="teachers.html">Meet your teachers</a>
-				</li>
-			</ul>
-		</nav>
+		<?php include('nav.php'); ?>
 		<main>
 			<h2>Meet your teachers</h2>
 			<article>
