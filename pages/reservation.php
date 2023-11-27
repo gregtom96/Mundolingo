@@ -1,37 +1,4 @@
-<?php include_once('variables.php'); ?>
-
-<?php
-    if(isset($_POST['email']) && isset($_POST['password'])) //si les 2 champs ont été remplis
-    {
-        foreach($users as $user)
-        {
-            if($user['email']===$_POST['email'] && $user['password']===$_POST['password'])
-            {
-                $loggedUser = [
-                    'email' => $user['email'],
-                ];
-            }
-            else 
-            {
-                $errorMessage = sprintf('The informations sent do not allow you to be identified : (%s/%s)',
-                    $_POST['email'],
-                    $_POST['password']
-                );
-            }
-        }
-    }
-?>
-
-<!-- Si l'utilisateur existe, on affiche le reste de la page -->
-<?php if(isset($loggedUser)): ?>
-    <p> Hi <?php echo $loggedUser['email']; ?> 
-    and welcome on your session ! </p>
-
-<!-- Si l'utilisateur n'existe pas -->
-<?php else: ?>
-    <!-- On redirige vers la page de login -->
-    <meta http-equiv="refresh" content="0; url=../index.php" />
-<?php endif; ?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +12,7 @@
     </head>
 
     <body>
+        <?php include('info_user.php'); ?>
         <h1>Teach U by Rocio</h1>
         <?php include('nav.php'); ?>
         <main>

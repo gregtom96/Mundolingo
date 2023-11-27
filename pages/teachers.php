@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,6 +9,7 @@
 	</head>
 
     <body>
+		<?php include('info_user.php'); ?>
 		<h1>Teach U by Rocio</h1>
 		<?php include('nav.php'); ?>
 		<main>

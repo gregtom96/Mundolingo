@@ -1,9 +1,33 @@
 body{
-	background-image: url("../images/fond_pc.png");
+	background-image: url("../images/wallpaper.png");
 	background-size: cover;
 	margin: 0;
 	padding: 0;
 	color: white;
+}
+.info_user{
+	display: grid;
+	grid-template-columns: 20px 150px;
+	position: absolute;
+	right: 0px;
+}
+.rond_vert{
+	width: 10px;
+	height: 10px;
+	background-color: green;
+	border-radius: 5px;
+	margin: auto;
+}
+.nom{
+	color:green;
+}
+img[alt="logout"]{
+	width: 20px;
+	filter: brightness(0%); /*rendre l'image noire*/
+	margin: auto;
+}
+.logout{
+	color:red;
 }
 h1{
     font-family: "Futura";
@@ -21,8 +45,14 @@ li{
 							2ème valeur marges extérieures droite et gauche*/
 	padding: 10px;
 }
+a{
+	text-decoration: none;
+}
 a:visited{
     color:white;
+}
+a:hover{
+	text-decoration: underline;
 }
 main{
     background-color: rgba(0,0,0,0.5);
@@ -65,9 +95,6 @@ img{
 
 /*Responsive design pour affichage sur smartphone*/
 @media screen and (max-width: 1000px){
-	body{
-		background-image: url("../images/fond_mobile.png");
-	}
 	article{
 		width: 90%;
 		margin: auto;

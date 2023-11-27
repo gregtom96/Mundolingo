@@ -38,7 +38,7 @@ label{
 	display: inline-block;
 	width: 60px; /*pour aligner les champs de saisie*/
 }
-.login_button{
+.register_button{
 	text-align: center;
 }
 button{
@@ -64,8 +64,8 @@ h2{
 a{
 	color:white;
 }
-.error_msg{
-	color: red;
+.register_success{
+	color: yellow;
 }
 
 /*Responsive design pour affichage sur smartphone*/
