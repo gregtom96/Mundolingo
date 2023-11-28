@@ -2,6 +2,7 @@
 
 session_start(); 
 
+//utiliser db_local ou db_online en fonction du cas
 include('pages/db_local.php');
 
 	try
