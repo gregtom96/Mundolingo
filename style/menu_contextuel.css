@@ -1,0 +1,39 @@
+img[alt="logo_user"]{
+    width: 30px;
+}
+img[alt="logo_logout"]{
+    width: 20px;
+    filter: brightness(0%);
+}
+.menu_contextuel{
+    position: absolute;
+    right: 10px;
+}
+.menu_contextuel a{
+    color: black;
+}
+.menu_contextuel a:visited{
+    color: black;
+}
+.user_info{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.sub-menu-wrap{
+    background-color: white;
+    width: 100px;
+    border-radius: 5px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 200px;
+}
+.sub-menu{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

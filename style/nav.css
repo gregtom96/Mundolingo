@@ -1,0 +1,19 @@
+ul{
+	display: flex;
+	justify-content: center;
+}
+li{
+	list-style-type: none; 	/*suppression des puces*/
+	margin: 0px 10px;		/*1ère valeur: marges extérieures haut et bas
+							2ème valeur marges extérieures droite et gauche*/
+	padding: 10px;
+}
+a{
+	text-decoration: none;
+}
+a:visited{
+    color:white;
+}
+a:hover{
+	text-decoration: underline;
+}

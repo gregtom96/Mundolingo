@@ -5,54 +5,11 @@ body{
 	padding: 0;
 	color: white;
 }
-.info_user{
-	display: grid;
-	grid-template-columns: 20px 150px;
-	position: absolute;
-	right: 0px;
-}
-.rond_vert{
-	width: 10px;
-	height: 10px;
-	background-color: green;
-	border-radius: 5px;
-	margin: auto;
-}
-.nom{
-	color:green;
-}
-img[alt="logout"]{
-	width: 20px;
-	filter: brightness(0%); /*rendre l'image noire*/
-	margin: auto;
-}
-.logout{
-	color:red;
-}
 h1{
     font-family: "Futura";
 	text-shadow: 3px 3px 3px black;
 	text-align: center;
     font-size: 3em;
-}
-ul{
-	display: flex;
-	justify-content: center;
-}
-li{
-	list-style-type: none; 	/*suppression des puces*/
-	margin: 0px 10px;		/*1ère valeur: marges extérieures haut et bas
-							2ème valeur marges extérieures droite et gauche*/
-	padding: 10px;
-}
-a{
-	text-decoration: none;
-}
-a:visited{
-    color:white;
-}
-a:hover{
-	text-decoration: underline;
 }
 main{
     background-color: rgba(0,0,0,0.5);

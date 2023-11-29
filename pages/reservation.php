@@ -12,7 +12,7 @@
     </head>
 
     <body>
-        <?php include('info_user.php'); ?>
+        <?php include('menu_contextuel.php'); ?>
         <h1>Teach U by Rocio</h1>
         <?php include('nav.php'); ?>
         <main>
