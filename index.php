@@ -63,8 +63,8 @@ include('pages/db_local.php');
 				<h1>Teach U By Rocio</h1>
 				<h2>Travel. Communicate. Share.</h2>
 			</div>
-			<div class="formulaire">	
-				<nav>
+			<div class="formulaire">
+				<nav>	
 					<ul>
 						<li>
 							<a href="index.php">Login</a>

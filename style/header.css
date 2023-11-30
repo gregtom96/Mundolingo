@@ -1,3 +1,27 @@
+header{
+    position: relative;
+}
+h1{
+    font-family: "Futura";
+	text-shadow: 3px 3px 3px black;
+    font-size: 3em;
+    text-align: center;
+}
+.menu_contextuel{
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+.menu_contextuel a{
+    color: black;
+    text-decoration: none;
+}
+.menu_contextuel a:hover{
+    text-decoration: underline;
+}
+.menu_contextuel a:visited{
+    color: black;
+}
 img[alt="logo_user"]{
     width: 30px;
 }
@@ -5,22 +29,12 @@ img[alt="logo_logout"]{
     width: 20px;
     filter: brightness(0%);
 }
-.menu_contextuel{
-    position: absolute;
-    right: 10px;
-}
-.menu_contextuel a{
-    color: black;
-}
-.menu_contextuel a:visited{
-    color: black;
-}
 .user_info{
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.sub-menu-wrap{
+.sub_menu_wrap{
     background-color: white;
     width: 100px;
     border-radius: 5px;
@@ -28,10 +42,10 @@ img[alt="logo_logout"]{
     overflow: hidden;
     transition: max-height 0.5s;
 }
-.sub-menu-wrap.open-menu{
+.sub_menu_wrap.open-menu{
     max-height: 200px;
 }
-.sub-menu{
+.sub_menu{
     padding: 10px;
     display: flex;
     align-items: center;

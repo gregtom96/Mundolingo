@@ -5,17 +5,13 @@ body{
 	padding: 0;
 	color: white;
 }
-h1{
-    font-family: "Futura";
-	text-shadow: 3px 3px 3px black;
-	text-align: center;
-    font-size: 3em;
-}
 main{
     background-color: rgba(0,0,0,0.5);
-	border: 2px solid black;
+	border: 1px solid black;
 	border-radius: 10px;
 	padding: 20px;
+	margin: auto;
+	width: 80%;
 }
 h2{
     font-family:"Futura";
@@ -27,11 +23,11 @@ h3{
 }
 article{
 	background-color: white;
-	width: 50%;
-	padding: 20px;
-	border-radius: 10px;
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
 	color: black;
+	border-radius: 10px;
+	width: 60%;
+	padding: 20px;
 }
 /*pour que le cadre de l'article englobe la photo même
 si il n'y a pas assez de texte*/

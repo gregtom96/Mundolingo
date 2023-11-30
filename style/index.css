@@ -14,12 +14,14 @@ main{
 ul{
 	display: flex;
 	justify-content: center;
+	width: 100%;
+	padding: 0;
 }
 li{
-	list-style-type: none; 	/*suppression des puces*/
-	margin: 0px 10px;		/*1ère valeur: marges extérieures haut et bas
-							2ème valeur marges extérieures droite et gauche*/
-	padding: 10px;
+	list-style: none; 	/*suppression des puces*/
+	display: inline-block;
+	text-align: center;
+	width: 50%;
 }
 /*element de la flexbox main*/
 .title{

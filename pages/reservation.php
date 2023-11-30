@@ -7,13 +7,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Teach U By Rocio</title>
         <link href="../style/reservation.css" rel="stylesheet">
+        <link href="../style/header.css" rel="stylesheet">
+        <script src="../scripts/header.js" defer></script>
+        <link href="../style/nav.css" rel="stylesheet">
 		<script src="../scripts/functions.js" defer></script>
-		<script src="../scripts/main.js" defer></script>
+		<script src="../scripts/main.js" defer></script>  
     </head>
 
     <body>
-        <?php include('menu_contextuel.php'); ?>
-        <h1>Teach U by Rocio</h1>
+        <?php include('header.php'); ?>
         <?php include('nav.php'); ?>
         <main>
             <h2>Make your reservation</h2>

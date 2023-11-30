@@ -6,12 +6,14 @@
 		<meta charset="utf-8" />
 		<title>Teach U by Rocio</title>
 		<link href="../style/teachers.css" rel="stylesheet">
+		<link href="../style/header.css" rel="stylesheet">
+        <script src="../scripts/header.js" defer></script>
+        <link href="../style/nav.css" rel="stylesheet">
 	</head>
 
     <body>
-		<?php include('menu_contextuel.php'); ?>
-		<h1>Teach U by Rocio</h1>
-		<?php include('nav.php'); ?>
+		<?php include('header.php'); ?>
+        <?php include('nav.php'); ?>
 		<main>
 			<h2>Meet your teachers</h2>
 			<article>
