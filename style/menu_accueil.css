@@ -1,3 +1,6 @@
+nav{
+	margin: 20px;
+}
 nav ul{
 	display: flex;
 	justify-content: center;
@@ -8,13 +11,14 @@ nav li{
 	list-style: none; 	/*suppression des puces*/
 	padding-left: 20px;
 	padding-right: 20px;
+	text-transform: uppercase;
 }
 nav a:visited{
 	color: white;
 }
 nav a{
 	text-decoration: none;
-	font-size: 1.5em;
+	font-size: 1em;
 	position: relative; /*impératif car on utilise la position absolue dans a::after*/
 	transition: font-weight 0.5s, color 0.5s; /*on transforme la propriété font-weight lors d'un hover*/
 }
@@ -26,7 +30,7 @@ nav a::after{
 	height: 2px;
 	bottom: 0;
 	left: 0;
-	top: 30px;
+	top: 20px;
 	background-color: white;
 	transition: transform 0.5s;
 } 

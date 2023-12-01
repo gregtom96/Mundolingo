@@ -53,29 +53,31 @@ include('db_local.php');
 	
 	<body>
 		<main>
-			<div class="title">
+			<div class="left_element">
 				<h1>Teach U By Rocio</h1>
 				<h2>Travel. Communicate. Share.</h2>
 			</div>
-			<div class="formulaire">	
+			<div class="right_element">	
 				<?php include('menu_accueil.php'); ?>
 				<form method="post" action="register.php">
-                    <p>
-						<label for="full_name">Full name</label> : 
-						<input type="text" name="full_name" id="full_name">
-					</p>
-                    <p>
-						<label for="age">Age</label> : 
-						<input type="number" name="age" id="age">
-					</p>
-					<p>
-						<label for="email">Email</label> : 
-						<input type="email" name="email" id="email">
-					</p>
-					<p>
-						<label for="password">Create password</label> :
-						<input type="password" name="password" id="password">
-					</p>
+					<div class="formulaire">
+						<p>
+							<label for="full_name">Full name</label> : 
+							<input type="text" name="full_name" id="full_name">
+						</p>
+						<p>
+							<label for="age">Age</label> : 
+							<input type="number" name="age" id="age">
+						</p>
+						<p>
+							<label for="email">Email</label> : 
+							<input type="email" name="email" id="email">
+						</p>
+						<p>
+							<label for="password">Create password</label> :
+							<input type="password" name="password" id="password">
+						</p>
+					</div>
 					<div class="register_success">
 						<?php if(isset($register_successfull)) : ?>
 							<?php echo $register_successfull; ?>

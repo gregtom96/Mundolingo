@@ -60,21 +60,23 @@ include('pages/db_local.php');
 	
 	<body>
 		<main>
-			<div class="title">
+			<div class="left_element">
 				<h1>Teach U By Rocio</h1>
 				<h2>Travel. Communicate. Share.</h2>
 			</div>
-			<div class="formulaire">
+			<div class="right_element">
 				<?php include('pages/menu_accueil.php'); ?>
 				<form method="post" action="index.php">
-					<p>
-						<label for="email">Email</label> : 
-						<input type="email" name="email" id="email">
-					</p>
-					<p>
-						<label for="password">Password</label> :
-						<input type="password" name="password" id="password">
-					</p>
+					<div class="formulaire">
+						<p>
+							<label for="email">Email</label> : 
+							<input type="email" name="email" id="email">
+						</p>
+						<p>
+							<label for="password">Password</label> :
+							<input type="password" name="password" id="password">
+						</p>
+					</div>
 					<!-- Doit afficher un message d'erreur d'authentification -->
 					<div class="error_msg">
 						<?php if(isset($errorMessage)) : ?>

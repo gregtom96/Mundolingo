@@ -1,6 +1,8 @@
 body{
 	background-image: url("../images/wallpaper.png");
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
 	margin: 0;
 	padding: 0;
 	color: white;
@@ -12,7 +14,7 @@ main{
 	height: 100vh;
 }
 /*element de la flexbox main*/
-.title{
+.left_element{
 	margin-left: 50px;
 	font-family:"Futura";
 	text-shadow: 3px 3px 3px black;
@@ -26,13 +28,16 @@ h2{
 	font-size: 2em;
 }
 /*element de la flexbox main*/
-.formulaire{
+.right_element{
 	background-color: rgba(0,0,0,0.5);
 	border: 2px solid black;
 	border-radius: 10px;
-	padding: 20px;
+	padding: 0px 20px 20px 20px;  /* haut | droit | bas | gauche */
 	width: 20%;
 	margin-right: 50px;
+}
+.formulaire{
+	text-align: center;
 }
 label{
 	display: inline-block;
@@ -48,7 +53,7 @@ button{
 	background-color: yellow;
 	border-radius: 6px;
 	width:100px;
-	height:50px;
+	height:40px;
 }
 
 /*Responsive design pour affichage sur smartphone*/
@@ -56,17 +61,29 @@ button{
 	main{
 		display: grid;
 		grid-template-columns: 1fr;
-		height: auto;
+		margin-bottom: 20px;
 	}
-	.title{
-		margin: auto;
+	.left_element{
+		margin-left: 0;
+		margin-top: 0;
+		margin-bottom: 10px;
 		line-height: normal; /*espace entre les lignes*/	
 	}
-	.formulaire{
+	.right_element{
 		margin: auto;
-		width: 80%;
+		width: 40%;
+	}
+	h1{
+		font-size: 4em;
+		margin-bottom: 20px;
 	}
 	h2{
 		font-size: 1.5em;
+		margin: 0;
+	}
+}
+@media screen and (max-width: 600px){
+	.right_element{
+		width: 60%;
 	}
 }
