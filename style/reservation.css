@@ -27,5 +27,8 @@ h2{
 
 /*Responsive design pour affichage sur smartphone*/
 @media screen and (max-width: 1000px){
-
+	body{
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }

@@ -55,6 +55,7 @@ include('pages/db_local.php');
 		<meta charset="utf-8" />
 		<title>Teach U by Rocio</title>
 		<link href="style/index.css" rel="stylesheet">
+		<link href="style/menu_accueil.css" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -64,16 +65,7 @@ include('pages/db_local.php');
 				<h2>Travel. Communicate. Share.</h2>
 			</div>
 			<div class="formulaire">
-				<nav>	
-					<ul>
-						<li>
-							<a href="index.php">Login</a>
-						</li>
-						<li>
-							<a href="pages/register.php">Register</a>
-						</li>
-					</ul>
-				</nav>
+				<?php include('pages/menu_accueil.php'); ?>
 				<form method="post" action="index.php">
 					<p>
 						<label for="email">Email</label> : 

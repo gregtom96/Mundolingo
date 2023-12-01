@@ -48,6 +48,7 @@ include('db_local.php');
 		<meta charset="utf-8" />
 		<title>Teach U by Rocio</title>
 		<link href="../style/register.css" rel="stylesheet">
+		<link href="../style/menu_accueil.css" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -57,16 +58,7 @@ include('db_local.php');
 				<h2>Travel. Communicate. Share.</h2>
 			</div>
 			<div class="formulaire">	
-                <nav>
-					<ul>
-						<li>
-							<a href="../index.php">Login</a>
-						</li>
-						<li>
-							<a href="register.php">Register</a>
-						</li>
-					</ul>
-				</nav>
+				<?php include('menu_accueil.php'); ?>
 				<form method="post" action="register.php">
                     <p>
 						<label for="full_name">Full name</label> : 
