@@ -17,6 +17,7 @@ nav a:visited{
 	color: white;
 }
 nav a{
+	color: white;
 	text-decoration: none;
 	font-size: 1em;
 	position: relative; /*impératif car on utilise la position absolue dans a::after*/
@@ -40,4 +41,11 @@ nav a:hover::after {
 nav a:hover{
 	font-weight: bold;
 	color: white;
+}
+
+/*Responsive design pour affichage sur smartphone*/
+@media screen and (max-width: 1000px){
+	nav a::after{
+		top: 30px;
+	}
 }

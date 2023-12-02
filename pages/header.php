@@ -1,7 +1,8 @@
 <header>
-
-    <h1>Teach U by Rocio</h1>
-
+    <div class="titre">
+        <h1>Teach U by Rocio</h1>
+    </div>
+    
     <div class="menu_contextuel">
         <div class="user_info">
             <img src="../images/logo_user.png" alt="logo_user" onclick="toggleMenu()">

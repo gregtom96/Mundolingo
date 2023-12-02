@@ -1,6 +1,8 @@
 body{
 	background-image: url("../images/wallpaper.png");
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
 	margin: 0;
 	padding: 0;
     color: white;
@@ -12,6 +14,9 @@ main{
 	padding: 20px;
 	margin: auto;
 	width: 80%;
+}
+section{
+	margin-bottom: 20px;
 }
 button{
 	background-color: yellow;
@@ -28,7 +33,7 @@ h2{
 /*Responsive design pour affichage sur smartphone*/
 @media screen and (max-width: 1000px){
 	body{
-		background-size: cover;
-		background-repeat: no-repeat;
+		display: grid;
+		grid-template-columns: 1fr;
 	}
 }

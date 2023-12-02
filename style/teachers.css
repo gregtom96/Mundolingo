@@ -1,6 +1,8 @@
 body{
 	background-image: url("../images/wallpaper.png");
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
 	margin: 0;
 	padding: 0;
 	color: white;
@@ -48,8 +50,8 @@ img{
 
 /*Responsive design pour affichage sur smartphone*/
 @media screen and (max-width: 1000px){
-	article{
-		width: 90%;
-		margin: auto;
+	body{
+		display: grid;
+		grid-template-columns: 1fr;
 	}
 }

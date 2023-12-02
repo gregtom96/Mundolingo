@@ -37,3 +37,13 @@ nav a:hover{
 	font-weight: bold;
 	color: black;
 }
+
+/*Responsive design pour affichage sur smartphone*/
+@media screen and (max-width: 1000px){
+	nav{
+		text-align: center;
+	}
+	nav a::after{
+		top: 40px;
+	}
+}

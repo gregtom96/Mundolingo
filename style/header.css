@@ -1,16 +1,22 @@
 header{
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+}
+.titre{
+    grid-column-start: 2;
+    margin: auto;
+    text-align: center;
+}
+.menu_contextuel{
+    grid-column-start: 3;
+    margin: auto;
+    margin-right: 20px;
 }
 h1{
     font-family: "Futura";
 	text-shadow: 3px 3px 3px black;
-    font-size: 3em;
-    text-align: center;
-}
-.menu_contextuel{
-    position: absolute;
-    right: 30px;
-    top: 0;
+    font-size: 4em;
 }
 .menu_contextuel a{
     color: black;
@@ -40,6 +46,7 @@ img[alt="logo_logout"]{
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.5s;
+    position: absolute; /*indispensable pour ne pas faire bouger la div user_info lors du clic*/
 }
 .sub_menu_wrap.open-menu{
     max-height: 200px;
