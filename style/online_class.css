@@ -1,0 +1,22 @@
+body{
+	background-image: url("../images/wallpaper.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	margin: 0;
+	padding: 0;
+    color: white;
+}
+main{
+    background-color: rgba(0, 0, 0, 0.5);
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+	width: 80%;
+}
+h2{
+    font-family:"Futura";
+	text-shadow: 3px 3px 3px black;
+    text-align: center;
+}

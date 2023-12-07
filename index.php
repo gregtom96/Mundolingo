@@ -53,6 +53,10 @@ include('pages/db_local.php');
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<!--Pour que les media queries soient pris en charge sur tous les dispositifs
+		et pour que la surface d'affichage du navigateur s'adapte 
+		à la largeur d'affichage de l'appareil-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Teach U by Rocio</title>
 		<link href="style/index.css" rel="stylesheet">
 		<link href="style/menu_accueil.css" rel="stylesheet">

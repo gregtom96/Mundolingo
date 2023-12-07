@@ -13,6 +13,7 @@ nav a:visited{
     color:white;
 }
 nav a{
+	color: white;
 	text-decoration: none;
 	position: relative; /*impératif car on utilise la position absolue dans a::after*/
 	transition: font-weight 0.5s, color 0.5s; /*on transforme la propriété font-weight lors d'un hover*/

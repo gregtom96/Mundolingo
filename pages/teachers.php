@@ -4,6 +4,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Teach U by Rocio</title>
 		<link href="../style/teachers.css" rel="stylesheet">
 		<link href="../style/header.css" rel="stylesheet">
@@ -17,7 +18,7 @@
 		<main>
 			<h2>Meet your teachers</h2>
 			<article>
-				<img src="../images/Rocio.jpg" alt="Rocio">
+				<img src="../images/Rocio.png" alt="Rocio">
 				<h3> Rocio </h3>
 				<p>
 					Rocio is a 28 years old teacher from Argentina.
