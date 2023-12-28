@@ -36,13 +36,14 @@ include('pages/db_local.php');
             if($user['email']===$_POST['email'] && $user['password']===$_POST['password'])
             {
                 $_SESSION['LOGGED_USER']=$user['full_name'];
+				$_SESSION['LOGGED_USER_EMAIL']=$user['email'];
 				header('Location: pages/reservation.php');
             }
             else 
             {
                 $errorMessage = sprintf('The informations sent do not allow you to be identified : (%s/%s)',
-                    $_POST['email'],
-                    $_POST['password']
+                    htmlspecialchars($_POST['email']),
+                    htmlspecialchars($_POST['password'])
                 );
             }
         }
@@ -57,7 +58,8 @@ include('pages/db_local.php');
 		et pour que la surface d'affichage du navigateur s'adapte 
 		à la largeur d'affichage de l'appareil-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Teach U by Rocio</title>
+		<link rel="icon" type="image/vnd.icon" href="images/favicon.ico">
+		<title>Teach U</title>
 		<link href="style/index.css" rel="stylesheet">
 		<link href="style/menu_accueil.css" rel="stylesheet">
 	</head>
@@ -65,7 +67,7 @@ include('pages/db_local.php');
 	<body>
 		<main>
 			<div class="left_element">
-				<h1>Teach U By Rocio</h1>
+				<h1>Teach U</h1>
 				<h2>Travel. Communicate. Share.</h2>
 			</div>
 			<div class="right_element">

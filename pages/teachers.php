@@ -1,15 +1,16 @@
 <?php session_start(); ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Teach U by Rocio</title>
-		<link href="../style/teachers.css" rel="stylesheet">
+		<link rel="icon" type="image/vnd.icon" href="../images/favicon.ico">
+		<title>Teach U</title>
 		<link href="../style/header.css" rel="stylesheet">
         <script src="../scripts/header.js" defer></script>
         <link href="../style/nav.css" rel="stylesheet">
+		<link href="../style/teachers.css" rel="stylesheet">
 	</head>
 
     <body>
@@ -18,7 +19,7 @@
 		<main>
 			<h2>Meet your teachers</h2>
 			<article>
-				<img src="../images/Rocio.png" alt="Rocio">
+				<img src="../images/Rocio.jpg" alt="Rocio">
 				<h3> Rocio </h3>
 				<p>
 					Rocio is a 28 years old teacher from Argentina.

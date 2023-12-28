@@ -5,13 +5,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Teach U By Rocio</title>
+        <link rel="icon" type="image/vnd.icon" href="../images/favicon.ico">
+        <title>Teach U</title>
         <link href="../style/reservation.css" rel="stylesheet">
         <link href="../style/header.css" rel="stylesheet">
         <script src="../scripts/header.js" defer></script>
         <link href="../style/nav.css" rel="stylesheet">
-		<script src="../scripts/functions.js" defer></script>
-		<script src="../scripts/main.js" defer></script>  
+        <!--<script src="../scripts/bundle.js" defer></script>
+        <script src="../scripts/send_invitation.js" defer></script>-->
+        <script src="../scripts/functions.js" defer></script>
+		<script src="../scripts/main.js" defer></script> 
     </head>
 
     <body>

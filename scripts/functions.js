@@ -19,7 +19,7 @@ function getTeacherEmail(teacherName){
     return teacherEmail
 }
 
-function SendEmail(){
+function getInfos(){
     const form = document.querySelector("form")
 
     form.addEventListener("submit", (Event)=>{
@@ -43,5 +43,18 @@ function SendEmail(){
         let teacherEmail = getTeacherEmail(teacherName)
 
         openEmail(teacherEmail, classDate, classTime)
+    })
+}
+
+function sendCalendarEvent(){
+    const form = document.querySelector("form")
+
+    form.addEventListener("submit", (Event)=>{
+        //On empêche le comportement par défaut
+        Event.preventDefault()
+        console.log("Il n'y a pas eu de rechargement de la page")
+
+        const cal = getIcalObjectInstance([2023, 12, 12, 10, 0], [2023, 12, 12, 11, 0], "English class", "First english class", "Salta", "http://youtube.com" , "Greg" ,"gregzi96@gmail.com")
+        sendemail("gregtom96@gmail.com", "Test", "<h1>Welcome</h1>", cal)
     })
 }

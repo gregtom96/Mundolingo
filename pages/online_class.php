@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teach U By Rocio</title>
+    <link rel="icon" type="image/vnd.icon" href="../images/favicon.ico">
+    <title>Teach U</title>
     <link href="../style/header.css" rel="stylesheet">
     <script src="../scripts/header.js" defer></script>
     <link href="../style/nav.css" rel="stylesheet">

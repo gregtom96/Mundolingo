@@ -1,1 +1,2 @@
-SendEmail()
+getInfos()
+//sendCalendarEvent()

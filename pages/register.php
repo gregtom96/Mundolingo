@@ -47,7 +47,8 @@ include('db_local.php');
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Teach U by Rocio</title>
+		<link rel="icon" type="image/vnd.icon" href="../images/favicon.ico">
+		<title>Teach U</title>
 		<link href="../style/register.css" rel="stylesheet">
 		<link href="../style/menu_accueil.css" rel="stylesheet">
 	</head>
@@ -55,7 +56,7 @@ include('db_local.php');
 	<body>
 		<main>
 			<div class="left_element">
-				<h1>Teach U By Rocio</h1>
+				<h1>Teach U</h1>
 				<h2>Travel. Communicate. Share.</h2>
 			</div>
 			<div class="right_element">	
