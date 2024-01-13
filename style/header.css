@@ -1,0 +1,59 @@
+header{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto;
+}
+.titre{
+    grid-column-start: 2;
+    margin: auto;
+    text-align: center;
+}
+.menu_contextuel{
+    grid-column-start: 3;
+    margin: auto;
+    margin-right: 20px;
+}
+h1{
+    font-family: "Futura";
+	text-shadow: 3px 3px 3px black;
+    font-size: 4em;
+}
+.menu_contextuel a{
+    color: black;
+    text-decoration: none;
+}
+.menu_contextuel a:hover{
+    text-decoration: underline;
+}
+.menu_contextuel a:visited{
+    color: black;
+}
+img[alt="logo_user"]{
+    width: 30px;
+}
+img[alt="logo_logout"]{
+    width: 20px;
+}
+.user_info{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.sub_menu_wrap{
+    background-color: white;
+    width: 100px;
+    border-radius: 5px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    position: absolute; /*indispensable pour ne pas faire bouger la div user_info lors du clic*/
+}
+.sub_menu_wrap.open-menu{
+    max-height: 200px;
+}
+.sub_menu{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

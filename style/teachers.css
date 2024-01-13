@@ -1,0 +1,57 @@
+body{
+	background-image: url("../images/wallpaper.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+main{
+    background-color: rgb(236, 236, 236);
+	color: black;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+	width: 80%;
+}
+h2{
+    font-family:"Futura";
+    text-align: center;
+}
+h3{
+	font-size: 1.3em;
+}
+article{
+	background-color: rgb(194, 194, 194);
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+	color: black;
+	border-radius: 10px;
+	width: 60%;
+	padding: 20px;
+}
+/*pour que le cadre de l'article englobe la photo même
+si il n'y a pas assez de texte*/
+article::after{
+	content:"";
+	display: block;
+	clear: both;
+}
+img{
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+	border-radius: 50%;
+	float: left;
+	shape-outside: margin-box;
+	margin: 0 20px 5px 0;
+}
+
+/*Responsive design pour affichage sur smartphone*/
+@media screen and (max-width: 1000px){
+	body{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}

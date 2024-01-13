@@ -1,0 +1,39 @@
+body{
+	background-image: url("../images/wallpaper.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	margin: 0;
+	padding: 0;
+    color: white;
+}
+main{
+    background-color: rgb(236, 236, 236);
+	color: black;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 20px;
+	margin: auto;
+	width: 80%;
+}
+section{
+	margin-bottom: 20px;
+}
+button{
+	background-color: yellow;
+	border-radius: 6px;
+	width:100px;
+	height:50px;
+}
+h2{
+    font-family:"Futura";
+    text-align: center;
+}
+
+/*Responsive design pour affichage sur smartphone*/
+@media screen and (max-width: 1000px){
+	body{
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}

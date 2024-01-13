@@ -1,0 +1,95 @@
+body{
+	background-image: url("../images/wallpaper.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+main{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+}
+/*element de la flexbox main*/
+.left_element{
+	margin-left: 50px;
+	font-family:"Futura";
+	text-shadow: 3px 3px 3px black;
+	text-align: center;
+	line-height: 2em; /*espace entre les lignes*/
+}
+h1{
+	font-size: 5em;
+}
+h2{
+	font-size: 2em;
+}
+/*element de la flexbox main*/
+.right_element{
+	background-color: rgba(0,0,0,0.5);
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 0px 20px 20px 20px;  /* haut | droit | bas | gauche */
+	width: 20%;
+	margin-right: 50px;
+}
+.formulaire{
+	text-align: center;
+}
+label{
+	display: inline-block;
+	width: 80px; /*pour aligner les champs de saisie*/
+}
+input{
+	width: 150px;
+}
+.register_success{
+	color: yellow;
+}
+.register_button{
+	text-align: center;
+}
+button{
+	background-color: yellow;
+	border-radius: 6px;
+	width:100px;
+	height:40px;
+}
+
+/*Responsive design pour affichage sur smartphone*/
+@media screen and (max-width: 1000px){
+	main{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 2fr;
+	}
+	.left_element{
+		margin: auto;	
+	}
+	.right_element{
+		margin: auto;
+		width: auto;
+		font-size: 1.5em;
+	}
+	h1{
+		line-height: normal;
+		font-size: 4em;
+	}
+	label{
+		width: 100px; /*pour aligner les champs de saisie*/
+	}
+	input{
+		height: 1.5em;
+	}
+	button{
+		width: 120;
+		height: 50px;
+		font-size: 1em;
+	}
+}
+@media screen and (max-width: 600px){
+
+}

@@ -1,0 +1,51 @@
+nav{
+	margin: 20px;
+}
+nav ul{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 0;
+}
+nav li{
+	list-style: none; 	/*suppression des puces*/
+	padding-left: 20px;
+	padding-right: 20px;
+	text-transform: uppercase;
+}
+nav a:visited{
+	color: white;
+}
+nav a{
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+	position: relative; /*impératif car on utilise la position absolue dans a::after*/
+	transition: font-weight 0.5s, color 0.5s; /*on transforme la propriété font-weight lors d'un hover*/
+}
+nav a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	top: 20px;
+	background-color: white;
+	transition: transform 0.5s;
+} 
+nav a:hover::after {
+	transform: scaleX(1);
+}
+nav a:hover{
+	font-weight: bold;
+	color: white;
+}
+
+/*Responsive design pour affichage sur smartphone*/
+@media screen and (max-width: 1000px){
+	nav a::after{
+		top: 30px;
+	}
+}
