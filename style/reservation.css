@@ -29,6 +29,10 @@ h2{
     font-family:"Futura";
     text-align: center;
 }
+#paypal-button-container{
+	width: 500px;
+	margin: auto;
+}
 
 /*Responsive design pour affichage sur smartphone*/
 @media screen and (max-width: 1000px){
