@@ -13,6 +13,7 @@
         <link href="../style/nav.css" rel="stylesheet">
         <script src="https://www.paypal.com/sdk/js?client-id=ATSsgmmMP_e0Re6tNGuWBHJACGxVMymoMPCqbiswFBdhRN7WlzuJlTSdNS1oF8E4SMErvDJSLuxoM5Sv&currency=EUR"></script>
         <script src="../scripts/functions.js" defer></script>
+        <script src="../scripts/nodemailer.js" defer></script>
     </head>
 
     <body>
@@ -32,6 +33,7 @@
                     <label for="teacher">Choose your teacher :</label>
                     <select name="teacher" id="teacher" required>
                         <option value="Rocio">Rocio</option>
+                        <option value="Greg">Greg</option>
                     </select>
                 </p>
                 <p>
