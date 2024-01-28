@@ -37,14 +37,17 @@ h2{
 	margin-right: 50px;
 }
 .formulaire{
-	text-align: center;
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; /* Espace entre les colonnes */
+	padding-bottom: 10px;
+}
+.item{
+	display: flex;
+	align-items: center;
 }
 label{
-	display: inline-block;
-	width: 80px; /*pour aligner les champs de saisie*/
-}
-input{
-	width: 150px;
+	width : 70px;
 }
 .register_success{
 	color: yellow;

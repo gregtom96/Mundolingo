@@ -16,9 +16,31 @@ paypal.Buttons({
             //en cas de paiement approuvé
             let baliseSection = document.querySelector("section")
 
+            if(teacherName === "Greg"){
+
+                console.log("le calendrier de Greg doit s'afficher")
+    
+                let calendar = `
+                <iframe src="https://calendar.google.com/calendar/embed?src=gregtom96%40gmail.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+                `
+                baliseSection.innerHTML = calendar
+            }
+            else if(teacherName === "Rocio"){
+    
+                console.log("le calendrier de Rocio doit s'afficher")
+    
+                let calendar = `
+                <iframe src="https://calendar.google.com/calendar/embed?src=rocioaruarte69%40gmail.com&ctz=America%2FArgentina%2FSalta" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+                `
+                baliseSection.innerHTML = calendar
+            }
+    
+            baliseForm = document.createElement("form")
+            baliseForm.method = "get"
+            baliseForm.action = ""
+            baliseSection.appendChild(baliseForm)
+    
             let contenu = `
-            <iframe src="https://calendar.google.com/calendar/embed?src=rocioaruarte69%40gmail.com&ctz=America%2FArgentina%2FSalta" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
-            <form method="get" action="">
                 <p>
                     <label for="date">Choose a schedule for your class</label>
                     <input type="date" id="date" name="date" required>
@@ -30,8 +52,8 @@ paypal.Buttons({
                 <p>
                     <button onclick="secondStep()">Reserve your class</button>
                 </p>
-            </form>`
-            baliseSection.innerHTML = contenu
+                `
+            baliseForm.innerHTML = contenu
         })
     },
     onError: function (err){

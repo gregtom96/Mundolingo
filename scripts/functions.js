@@ -1,5 +1,6 @@
 //Variable globale
 let teacherEmail = "gregtom96@gmail.com"
+let teacherName = "Greg" //utilisée dans paiement.js
 
 function openEmail(teacherEmail, classDate, classTime){
     let mailto = `mailto:${teacherEmail}?subject=Appointment for English class&body=Hi ! I would like to have a class with you on ${classDate} at ${classTime} Thank you for your confirmation !`
@@ -26,7 +27,7 @@ function firstStep(){
 
     //On récupère le nom du prof selectionné
     let baliseTeacher = document.getElementById("teacher")
-    let teacherName = baliseTeacher.value
+    teacherName = baliseTeacher.value
     console.log(teacherName)
     //On récupère l'email du prof sélectionné
     teacherEmail = getTeacherEmail(teacherName)
