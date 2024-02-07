@@ -1,6 +1,7 @@
 <header>
     <div class="titre">
-        <h1>Teach U</h1>
+        <img src="../images/logo.png" alt="logo_website">
+        <h1>Mundolingo</h1>
     </div>
     
     <div class="menu_contextuel">

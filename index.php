@@ -59,7 +59,7 @@ include('pages/db_local.php');
 		à la largeur d'affichage de l'appareil-->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/vnd.icon" href="images/favicon.ico">
-		<title>Teach U</title>
+		<title>Mundolingo</title>
 		<link href="style/index.css" rel="stylesheet">
 		<link href="style/menu_accueil.css" rel="stylesheet">
 	</head>
@@ -67,7 +67,8 @@ include('pages/db_local.php');
 	<body>
 		<main>
 			<div class="left_element">
-				<h1>Teach U</h1>
+				<img src="images/logo.png" alt="logo_website">
+				<h1>Mundolingo</h1>
 				<h2>Travel. Communicate. Share.</h2>
 			</div>
 			<div class="right_element">

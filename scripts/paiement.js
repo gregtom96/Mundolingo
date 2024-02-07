@@ -8,7 +8,7 @@ paypal.Buttons({
             }]
         })
     },
-    onApprove: function(data, functions){
+    onApprove: function(data, actions){
         return actions.order.capture().then(function(details){
             alert("Transaction OK : "+details.payer.name.given_name);
 

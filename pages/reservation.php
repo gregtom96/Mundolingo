@@ -6,14 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/vnd.icon" href="../images/favicon.ico">
-        <title>Teach U</title>
+        <title>Mundolingo</title>
         <link href="../style/reservation.css" rel="stylesheet">
         <link href="../style/header.css" rel="stylesheet">
         <script src="../scripts/header.js" defer></script>
         <link href="../style/nav.css" rel="stylesheet">
-        <script src="https://www.paypal.com/sdk/js?client-id=ATSsgmmMP_e0Re6tNGuWBHJACGxVMymoMPCqbiswFBdhRN7WlzuJlTSdNS1oF8E4SMErvDJSLuxoM5Sv&currency=EUR"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=ATecrMoU7ipg_Jz5Tom2fLVMDN_oEdpmTWcK4uZs1fi4G7bvx5fQZyouw_ExH9jNw2FUGvq3R3eV7EuU&currency=EUR"></script>
         <script src="../scripts/functions.js" defer></script>
-        <script src="../scripts/nodemailer.js" defer></script>
     </head>
 
     <body>

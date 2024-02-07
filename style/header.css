@@ -4,9 +4,16 @@ header{
     grid-template-rows: auto;
 }
 .titre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     grid-column-start: 2;
     margin: auto;
-    text-align: center;
+}
+img[alt="logo_website"]{
+    width: 80px;
+    height: 80px;
+    padding-right: 10px;
 }
 .menu_contextuel{
     grid-column-start: 3;
