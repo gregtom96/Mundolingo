@@ -27,12 +27,13 @@ include('db_local.php');
 	&& isset($_POST['age'])
 	&& isset($_POST['email'])
 	&& isset($_POST['password'])
-	&& isset($_POST['profile'])) //si les champs ont été remplis
+	&& isset($_POST['profile'])
+	&& (isset($_POST['english']) || isset($_POST['french']) || isset($_POST['spanish'])))
     {
 		//on crée une variable pour confirmer que le compte a bien été crée
 		$register_successfull='Your account has been created successfully. Please login.'; 
 
-		$sqlQuery = 'INSERT INTO users(full_name, email, password, age, profile) VALUES (:full_name, :email, :password, :age, :profile)';
+		$sqlQuery = 'INSERT INTO users(full_name, email, password, age, profile, english, french, spanish) VALUES (:full_name, :email, :password, :age, :profile, :english, :french, :spanish)';
 		$insertUser = $db->prepare($sqlQuery);
 		$insertUser->execute([
 			'full_name' => $_POST['full_name'],
@@ -40,6 +41,9 @@ include('db_local.php');
 			'email' => $_POST['email'],
 			'password' => $_POST['password'],
 			'profile' => $_POST['profile'],
+			'english' => $_POST['english'],
+			'french' => $_POST['french'],
+			'spanish' => $_POST['spanish'],
 		]);
     }
 ?>
@@ -53,6 +57,8 @@ include('db_local.php');
 		<title>Mundolingo</title>
 		<link href="../style/register.css" rel="stylesheet">
 		<link href="../style/menu_accueil.css" rel="stylesheet">
+		<script src="../scripts/functions.js" defer></script>
+        <script src="../scripts/main.js" defer></script>
 	</head>
 	
 	<body>
@@ -81,12 +87,21 @@ include('db_local.php');
 						<div class="item">	
 							<label> You are a </label> :
 						</div>
-						<div class="item">
+						<div class="item radio">
 							<input type="radio" name="profile" value="student" id="student">
 							<label for="student"> Student </label><br/>
 							<input type="radio" name="profile" value="teacher" id="teacher">
 							<label for="teacher"> Teacher </label><br/>
 						</div>
+					<!--<div class="item languages">
+							<span> Check languages you want to teach : </span>
+							<input type="checkbox" name="english" id="english"> 
+							<label for="english">English</label>
+							<input type="checkbox" name="french" id="french"> 
+							<label for="french">French</label>
+							<input type="checkbox" name="spanish" id="spanish"> 
+							<label for="spanish">Spanish</label>
+						</div>-->
 						<div class="item">
 							<label for="email">Email</label> : 
 						</div>

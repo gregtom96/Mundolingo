@@ -46,30 +46,31 @@ h2{
 	width: 20%;
 	margin-right: 50px;
 }
-.formulaire{
-	display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px; /* Espace entre les colonnes */
-	padding-bottom: 10px;
+.formulaire {
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 10px;
 }
 .item{
-	display: flex;
-	align-items: center;
+	grid-column: span 1; /* Chaque élément occupe une colonne */
 }
-label{
-	width : 70px;
+.languages{
+    grid-column: span 2; /* Les langues occupent les deux colonnes */
 }
 .register_success{
 	color: yellow;
 }
-.register_button{
-	text-align: center;
-}
 button{
+	grid-column: 1 / -1; /* Le bouton de registre occupe toutes les colonnes */
 	background-color: yellow;
 	border-radius: 6px;
 	width:100px;
 	height:40px;
+	margin-top: 10px;
+}
+.register_button{
+	text-align: center;
 }
 
 /*Responsive design pour affichage sur smartphone*/

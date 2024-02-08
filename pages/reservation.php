@@ -13,6 +13,7 @@
         <link href="../style/nav.css" rel="stylesheet">
         <script src="https://www.paypal.com/sdk/js?client-id=ATecrMoU7ipg_Jz5Tom2fLVMDN_oEdpmTWcK4uZs1fi4G7bvx5fQZyouw_ExH9jNw2FUGvq3R3eV7EuU&currency=EUR"></script>
         <script src="../scripts/functions.js" defer></script>
+        <script src="../scripts/main.js" defer></script>
     </head>
 
     <body>
@@ -29,15 +30,23 @@
                     </select>
                 </p>
                 <p>
+                    <label for="language">Choose your language :</label>
+                    <select name="language" id="language" required>
+                        <option value="english">English</option>
+                        <option value="french">French</option>
+                        <option value="spanish">Spanish</option>
+                    </select>
+                </p>
+                <!--
+                <p>
                     <label for="teacher">Choose your teacher :</label>
                     <select name="teacher" id="teacher" required>
-                        <option value="Rocio">Rocio</option>
                         <option value="Greg">Greg</option>
                     </select>
                 </p>
                 <p>
                     <button onclick="firstStep()"> Go ! </button>
-                </p>
+                </p>-->
             </section>
         </main>
     </body>

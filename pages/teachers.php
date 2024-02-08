@@ -19,14 +19,13 @@
 		<main>
 			<h2>Meet your teachers</h2>
 			<article>
-				<img src="../images/Rocio.jpg" alt="Rocio">
-				<h3> Rocio </h3>
+				<img src="../images/Greg.png" alt="Greg">
+				<h3> Greg </h3>
 				<p>
-					Rocio is a 28 years old teacher from Argentina.
-					In 2024, she obtained her degree from the "Profesorado Superior de Lenguas Vivas de Salta".
-					She started teaching english a few years ago besides her studies, and has helped a lot of 
-					students from all around the world to strengthen their communication, writing and listening skills.
-					She is used to work with people from different age, and always listen to them in order to help them achieve their goal.
+					Greg is a 27 years old teacher from France.
+					He has been travelling in a lot of countries all over the world,
+					to strengthen his communication skills.
+					Currently living in Argentina, he can teach both French and Spanish.
 				</p>
 			</article>
 		</main>

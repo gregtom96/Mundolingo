@@ -25,15 +25,7 @@ paypal.Buttons({
                 `
                 baliseSection.innerHTML = calendar
             }
-            else if(teacherName === "Rocio"){
-    
-                console.log("le calendrier de Rocio doit s'afficher")
-    
-                let calendar = `
-                <iframe src="https://calendar.google.com/calendar/embed?src=rocioaruarte69%40gmail.com&ctz=America%2FArgentina%2FSalta" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
-                `
-                baliseSection.innerHTML = calendar
-            }
+            //else if pour les autres profs
     
             baliseForm = document.createElement("form")
             baliseForm.method = "get"

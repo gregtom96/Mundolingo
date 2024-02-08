@@ -9,9 +9,6 @@ function openEmail(teacherEmail, classDate, classTime){
 
 function getTeacherEmail(teacherName){
     switch (teacherName){
-        case "Rocio":
-            teacherEmail = "rocioaruarte69@gmail.com"
-            break
         case "Greg":
             teacherEmail = "gregtom96@gmail.com"
             break
@@ -19,7 +16,87 @@ function getTeacherEmail(teacherName){
     return teacherEmail
 }
 
-function firstStep(){
+function studentOrTeacher(){
+    let radios = document.querySelectorAll('input[type="radio"][name="profile"]')
+
+    radios.forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            // La fonction à exécuter lorsque la sélection change
+            console.log("Bouton radio sélectionné :", radio.value);
+            if(radio.value==="teacher"){
+                let elementBefore = document.querySelector(".radio")
+                let baliseDiv = document.createElement("div")
+                baliseDiv.classList.add("item", "languages")
+                elementBefore.insertAdjacentElement('afterend', baliseDiv);
+
+                let baliseSpan = document.createElement("span")
+                baliseSpan.textContent = "Check languages you want to teach : "
+                baliseDiv.appendChild(baliseSpan)
+
+                let baliseInputEnglish = document.createElement("input")
+                baliseInputEnglish.type = "checkbox"
+                baliseInputEnglish.name = "english"
+                baliseInputEnglish.id = "english"
+                baliseDiv.appendChild(baliseInputEnglish)
+
+                let baliseLabelEnglish = document.createElement("label")
+                baliseLabelEnglish.htmlFor = "english"
+                baliseLabelEnglish.textContent = "English" 
+                baliseDiv.appendChild(baliseLabelEnglish)
+
+                let baliseInputFrench = document.createElement("input")
+                baliseInputFrench.type = "checkbox"
+                baliseInputFrench.name = "french"
+                baliseInputFrench.id = "french"
+                baliseDiv.appendChild(baliseInputFrench)
+
+                let baliseLabelFrench = document.createElement("label")
+                baliseLabelFrench.htmlFor = "french"
+                baliseLabelFrench.textContent = "French" 
+                baliseDiv.appendChild(baliseLabelFrench)
+
+                let baliseInputSpanish = document.createElement("input")
+                baliseInputSpanish.type = "checkbox"
+                baliseInputSpanish.name = "spanish"
+                baliseInputSpanish.id = "spanish"
+                baliseDiv.appendChild(baliseInputSpanish)
+
+                let baliseLabelSpanish = document.createElement("label")
+                baliseLabelSpanish.htmlFor = "spanish"
+                baliseLabelSpanish.textContent = "Spanish" 
+                baliseDiv.appendChild(baliseLabelSpanish)
+            }
+        });
+    });
+}
+
+function formulaire(){
+    /*
+    let baliseLanguage = document.getElementById("language")
+    
+    baliseLanguage.addEventListener("change", function(){
+        console.log("vous avez choisi la langue suivante :", baliseLanguage.value)
+
+    })*/
+
+
+    /*
+    let contenu = `
+    <p>
+        <label for="teacher">Choose your teacher :</label>
+        <select name="teacher" id="teacher" required>
+            <option value="Greg">Greg</option>
+        </select>
+    </p>
+    <p>
+        <button onclick="secondStep()"> Go ! </button>
+    </p>
+     `
+    let baliseSection = document.querySelector("section")
+    baliseSection.innerHTML = contenu*/
+}
+
+function secondStep(){
     //On récupère le type de classe renseigné par l'utilisateur 
     let baliseClass = document.getElementById("class")
     let classSelected = baliseClass.value
@@ -67,15 +144,7 @@ function firstStep(){
             `
             baliseSection.innerHTML = calendar
         }
-        else if(teacherName === "Rocio"){
-
-            console.log("le calendrier de Rocio doit s'afficher")
-
-            let calendar = `
-            <iframe src="https://calendar.google.com/calendar/embed?src=rocioaruarte69%40gmail.com&ctz=America%2FArgentina%2FSalta" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
-            `
-            baliseSection.innerHTML = calendar
-        }
+        //else if pour les autres profs
 
         baliseForm = document.createElement("form")
         baliseForm.method = "get"
@@ -92,14 +161,14 @@ function firstStep(){
                 <input type="time" id="time" name="time" required>
             </p>
             <p>
-                <button onclick="secondStep()">Reserve your class</button>
+                <button onclick="thirdStep()">Reserve your class</button>
             </p>
             `
         baliseForm.innerHTML = contenu
     }
 }
 
-function secondStep(){
+function thirdStep(){
 
     let baliseDate = document.getElementById("date")
     let DateSelected = baliseDate.value
