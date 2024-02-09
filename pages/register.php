@@ -23,12 +23,28 @@ include('db_local.php');
 	
 	// Si tout va bien, on peut continuer
 
+	// Vérification si les 3 checkbox ont été cochées
+	if (!empty($_POST['english'])) {
+		$englishValue = $_POST['english'];
+	} else {
+		$englishValue = 'off';
+	}
+	if (!empty($_POST['french'])) {
+		$frenchValue = $_POST['french'];
+	} else {
+		$frenchValue = 'off';
+	}
+	if (!empty($_POST['spanish'])) {
+		$spanishValue = $_POST['spanish'];
+	} else {
+		$spanishValue = 'off';
+	}
+
     if(isset($_POST['full_name']) 
 	&& isset($_POST['age'])
 	&& isset($_POST['email'])
 	&& isset($_POST['password'])
-	&& isset($_POST['profile'])
-	&& (isset($_POST['english']) || isset($_POST['french']) || isset($_POST['spanish'])))
+	&& isset($_POST['profile']))
     {
 		//on crée une variable pour confirmer que le compte a bien été crée
 		$register_successfull='Your account has been created successfully. Please login.'; 
@@ -41,9 +57,9 @@ include('db_local.php');
 			'email' => $_POST['email'],
 			'password' => $_POST['password'],
 			'profile' => $_POST['profile'],
-			'english' => $_POST['english'],
-			'french' => $_POST['french'],
-			'spanish' => $_POST['spanish'],
+			'english' => $englishValue,
+			'french' => $frenchValue,
+			'spanish' => $spanishValue,
 		]);
     }
 ?>
