@@ -1,6 +1,7 @@
 //Variable globale
 let teacherEmail = "gregtom96@gmail.com"
 let teacherName = "Greg" //utilisée dans paiement.js
+let teacherSelected = "blabla"
 
 function openEmail(teacherEmail, classDate, classTime){
     let mailto = `mailto:${teacherEmail}?subject=Appointment for English class&body=Hi ! I would like to have a class with you on ${classDate} at ${classTime} Thank you for your confirmation !`
@@ -143,7 +144,7 @@ function chooseYourTeacher(){
     let baliseSection = document.querySelector("section")
 
     baliseTeacher.addEventListener("change", function(){
-        let teacherSelected = baliseTeacher.value
+        teacherSelected = baliseTeacher.value //teacherSelected est une variable globale
         console.log("vous avez choisi le prof suivant :", teacherSelected)
 
         if(teacherSelected === "Greg"){
@@ -181,8 +182,6 @@ function chooseYourTeacher(){
 
 function reserveYourClass(teacherSelected){
 
-    console.log("le teacher selected est :", teacherSelected)
-
     let baliseDate = document.getElementById("date")
     let DateSelected = baliseDate.value
     console.log(DateSelected)
@@ -192,6 +191,5 @@ function reserveYourClass(teacherSelected){
     console.log(TimeSelected)
 
     let teacherEmail = getTeacherEmail(teacherSelected)
-    console.log("teacher email : ", teacherEmail)
     openEmail(teacherEmail, DateSelected, TimeSelected)
 }
