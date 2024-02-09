@@ -1,2 +1,5 @@
 studentOrTeacher()
-//formulaire()
+chooseYourClass()
+//chooseYourLanguage() //appelé dans chooseYourClass()
+//chooseYourTeacher()  //appelé dans chooseYourLanguage()
+//reserveYourClass  //appelé dans chooseYourTeacher()

@@ -70,72 +70,83 @@ function studentOrTeacher(){
     });
 }
 
-function formulaire(){
-    /*
-    let baliseLanguage = document.getElementById("language")
-    
-    baliseLanguage.addEventListener("change", function(){
-        console.log("vous avez choisi la langue suivante :", baliseLanguage.value)
-
-    })*/
-
-
-    /*
-    let contenu = `
-    <p>
-        <label for="teacher">Choose your teacher :</label>
-        <select name="teacher" id="teacher" required>
-            <option value="Greg">Greg</option>
-        </select>
-    </p>
-    <p>
-        <button onclick="secondStep()"> Go ! </button>
-    </p>
-     `
+function chooseYourClass(){
+    let baliseClass = document.getElementById('class')
     let baliseSection = document.querySelector("section")
-    baliseSection.innerHTML = contenu*/
+
+    baliseClass.addEventListener("change", function(){
+        let classSelected = baliseClass.value
+        console.log("vous avez choisi le type de classe suivant :", classSelected)
+
+        //Si l'utilisateur a selectionné "lesson", on affiche les boutons Paypal
+        if(classSelected==="lesson"){
+            //On efface le contenu de section
+            let contenu = ``;
+            let baliseSection = document.querySelector("section")
+            baliseSection.innerHTML = contenu
+
+            let boutonPaypal = document.createElement("div")
+            boutonPaypal.id = "paypal-button-container"
+
+            let baliseScript = document.createElement("script")
+            baliseScript.src = "../scripts/paiement.js"
+            
+            baliseSection.appendChild(boutonPaypal)
+            baliseSection.appendChild(baliseScript)
+        }
+
+        //Si l'utilisateur a selectionné "introduction", on affiche la suite
+        else if(classSelected==="introduction"){
+            let contenu = `
+            <p>
+                <label for="language">Choose your language :</label>
+                <select name="language" id="language" required>
+                    <option></option>
+                    <option value="english">English</option>
+                    <option value="french">French</option>
+                    <option value="spanish">Spanish</option>
+                </select>
+            </p>
+            `
+            baliseSection.innerHTML = contenu
+            chooseYourLanguage()
+        }
+    })
 }
 
-function secondStep(){
-    //On récupère le type de classe renseigné par l'utilisateur 
-    let baliseClass = document.getElementById("class")
-    let classSelected = baliseClass.value
-    console.log(classSelected)
+function chooseYourLanguage(){
+    let baliseLanguage = document.getElementById('language')
+    let baliseSection = document.querySelector("section")
 
-    //On récupère le nom du prof selectionné
-    let baliseTeacher = document.getElementById("teacher")
-    teacherName = baliseTeacher.value
-    console.log(teacherName)
-    //On récupère l'email du prof sélectionné
-    teacherEmail = getTeacherEmail(teacherName)
+    baliseLanguage.addEventListener("change", function(){
+        let languageSelected = baliseLanguage.value
+        console.log("vous avez choisi la langue suivante :", languageSelected)
 
-    //Si l'utilisateur a selectionné "lesson", on affiche les boutons Paypal
-    if(classSelected==="lesson"){
+        //A TERME : récupérer tous les profs enseignant la langue choisie
 
-        console.log("vous avez choisi une leçon")
-
-        //On efface le contenu de section
-        let contenu = ``;
-        let baliseSection = document.querySelector("section")
+        let contenu = `
+        <p>
+            <label for="teacher">Choose your teacher :</label>
+            <select name="teacher" id="teacher" required>
+                <option></option>
+                <option value="Greg">Greg</option>
+            </select>
+        </p>
+        `
         baliseSection.innerHTML = contenu
+        chooseYourTeacher()
+    })
+}
 
-        let boutonPaypal = document.createElement("div")
-        boutonPaypal.id = "paypal-button-container"
+function chooseYourTeacher(){
+    let baliseTeacher = document.getElementById('teacher')
+    let baliseSection = document.querySelector("section")
 
-        let baliseScript = document.createElement("script")
-        baliseScript.src = "../scripts/paiement.js"
-        
-        baliseSection.appendChild(boutonPaypal)
-        baliseSection.appendChild(baliseScript)
-    }
-    //Si l'utilisateur a selectionné "introduction", on affiche l'agenda du prof selectionné
-    else if(classSelected==="introduction"){
+    baliseTeacher.addEventListener("change", function(){
+        let teacherSelected = baliseTeacher.value
+        console.log("vous avez choisi le prof suivant :", teacherSelected)
 
-        console.log("vous avez choisi un cours d'introduction")
-
-        let baliseSection = document.querySelector("section")
-
-        if(teacherName === "Greg"){
+        if(teacherSelected === "Greg"){
 
             console.log("le calendrier de Greg doit s'afficher")
 
@@ -161,14 +172,16 @@ function secondStep(){
                 <input type="time" id="time" name="time" required>
             </p>
             <p>
-                <button onclick="thirdStep()">Reserve your class</button>
+                <button onclick="reserveYourClass(teacherSelected)">Reserve your class</button>
             </p>
             `
         baliseForm.innerHTML = contenu
-    }
+    })
 }
 
-function thirdStep(){
+function reserveYourClass(teacherSelected){
+
+    console.log("le teacher selected est :", teacherSelected)
 
     let baliseDate = document.getElementById("date")
     let DateSelected = baliseDate.value
@@ -178,5 +191,7 @@ function thirdStep(){
     let TimeSelected = baliseTime.value
     console.log(TimeSelected)
 
+    let teacherEmail = getTeacherEmail(teacherSelected)
+    console.log("teacher email : ", teacherEmail)
     openEmail(teacherEmail, DateSelected, TimeSelected)
 }

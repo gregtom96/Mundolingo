@@ -25,22 +25,24 @@
                 <p>
                     <label for="class">Choose your class :</label>
                     <select name="class" id="class" required>
+                        <option> </option>
                         <option value="introduction">Introduction class (free)</option>
                         <option value="lesson">Lesson</option>
                     </select>
                 </p>
-                <p>
+            <!--<p>
                     <label for="language">Choose your language :</label>
                     <select name="language" id="language" required>
+                        <option></option>
                         <option value="english">English</option>
                         <option value="french">French</option>
                         <option value="spanish">Spanish</option>
                     </select>
                 </p>
-                <!--
                 <p>
                     <label for="teacher">Choose your teacher :</label>
                     <select name="teacher" id="teacher" required>
+                        <option></option>
                         <option value="Greg">Greg</option>
                     </select>
                 </p>
