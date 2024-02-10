@@ -7,7 +7,7 @@
             <a href="teachers.php">Meet your teachers</a>
         </li>
         <li>
-            <a href="share_calendar.php">Share your calendar</a>
+            <a href="tutorial.php">Tutorial</a>
         </li>
     </ul>
 </nav>

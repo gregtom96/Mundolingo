@@ -11,6 +11,8 @@
         <link href="../style/header.css" rel="stylesheet">
         <script src="../scripts/header.js" defer></script>
         <link href="../style/nav.css" rel="stylesheet">
+        <!--Client ID Live : ATecrMoU7ipg_Jz5Tom2fLVMDN_oEdpmTWcK4uZs1fi4G7bvx5fQZyouw_ExH9jNw2FUGvq3R3eV7EuU-->
+        <!--Client ID Sandbox : AfMIDAWqa_pSP2k1YSFKAVTcf2OfgSa5XFCNddL_YGysLum6lzJjS3CTbrCBiA5l9_br9AB3fr7DyKJH-->
         <script src="https://www.paypal.com/sdk/js?client-id=ATecrMoU7ipg_Jz5Tom2fLVMDN_oEdpmTWcK4uZs1fi4G7bvx5fQZyouw_ExH9jNw2FUGvq3R3eV7EuU&currency=EUR"></script>
         <script src="../scripts/functions.js" defer></script>
         <script src="../scripts/main.js" defer></script>

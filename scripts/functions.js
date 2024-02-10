@@ -164,6 +164,9 @@ function chooseYourTeacher(){
         baliseSection.appendChild(baliseForm)
 
         let contenu = `
+            <p> 
+                <em>Check the teacher's calendar above for availability.</em>
+            </p>
             <p>
                 <label for="date">Choose a schedule for your class</label>
                 <input type="date" id="date" name="date" required>

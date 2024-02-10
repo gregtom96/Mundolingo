@@ -10,8 +10,7 @@
     <link href="../style/header.css" rel="stylesheet">
     <script src="../scripts/header.js" defer></script>
     <link href="../style/nav.css" rel="stylesheet">
-    <link href="../style/share_calendar.css" rel="stylesheet">
-    <script src="https://www.paypal.com/sdk/js?client-id=ATSsgmmMP_e0Re6tNGuWBHJACGxVMymoMPCqbiswFBdhRN7WlzuJlTSdNS1oF8E4SMErvDJSLuxoM5Sv&currency=EUR"></script>
+    <link href="../style/tutorial.css" rel="stylesheet">
 </head>
     <body>
         <?php include('header.php'); ?>
