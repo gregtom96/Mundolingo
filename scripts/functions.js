@@ -1,7 +1,5 @@
 //Variable globale
-let teacherEmail = "gregtom96@gmail.com"
-let teacherName = "Greg" //utilisée dans paiement.js
-let teacherSelected = "blabla"
+let teacherName = "Greg"
 
 function openEmail(teacherEmail, classDate, classTime){
     let mailto = `mailto:${teacherEmail}?subject=Appointment for English class&body=Hi ! I would like to have a class with you on ${classDate} at ${classTime} Thank you for your confirmation !`
@@ -9,6 +7,7 @@ function openEmail(teacherEmail, classDate, classTime){
 }
 
 function getTeacherEmail(teacherName){
+    let teacherEmail = "gregtom96@gmail.com"
     switch (teacherName){
         case "Greg":
             teacherEmail = "gregtom96@gmail.com"
@@ -145,10 +144,10 @@ function chooseYourTeacher(){
     let baliseSection = document.querySelector("section")
 
     baliseTeacher.addEventListener("change", function(){
-        teacherSelected = baliseTeacher.value //teacherSelected est une variable globale
-        console.log("vous avez choisi le prof suivant :", teacherSelected)
+        teacherName = baliseTeacher.value //teacherName est une variable globale
+        console.log("vous avez choisi le prof suivant :", teacherName)
 
-        if(teacherSelected === "Greg"){
+        if(teacherName === "Greg"){
 
             console.log("le calendrier de Greg doit s'afficher")
 
@@ -177,14 +176,14 @@ function chooseYourTeacher(){
                 <input type="time" id="time" name="time" required>
             </p>
             <p>
-                <button onclick="reserveYourClass(teacherSelected)">Reserve your class</button>
+                <button onclick="reserveYourClass(teacherName)">Reserve your class</button>
             </p>
             `
         baliseForm.innerHTML = contenu
     })
 }
 
-function reserveYourClass(teacherSelected){
+function reserveYourClass(teacherName){
 
     let baliseDate = document.getElementById("date")
     let DateSelected = baliseDate.value
@@ -194,6 +193,6 @@ function reserveYourClass(teacherSelected){
     let TimeSelected = baliseTime.value
     console.log(TimeSelected)
 
-    let teacherEmail = getTeacherEmail(teacherSelected)
+    let teacherEmail = getTeacherEmail(teacherName)
     openEmail(teacherEmail, DateSelected, TimeSelected)
 }
