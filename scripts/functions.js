@@ -116,6 +116,7 @@ function chooseYourClass(){
 }
 
 function chooseYourLanguage(){
+    console.log("dans la fonction chooseYourLanguage")
     let baliseLanguage = document.getElementById('language')
     let baliseSection = document.querySelector("section")
 

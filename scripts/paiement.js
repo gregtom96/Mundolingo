@@ -15,37 +15,19 @@ paypal.Buttons({
             //On rajoute ici les éléments à rajouter dans la page html
             //en cas de paiement approuvé
             let baliseSection = document.querySelector("section")
-
-            if(teacherName === "Greg"){
-
-                console.log("le calendrier de Greg doit s'afficher")
-    
-                let calendar = `
-                <iframe src="https://calendar.google.com/calendar/embed?src=gregtom96%40gmail.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
-                `
-                baliseSection.innerHTML = calendar
-            }
-            //else if pour les autres profs
-    
-            baliseForm = document.createElement("form")
-            baliseForm.method = "get"
-            baliseForm.action = ""
-            baliseSection.appendChild(baliseForm)
-    
             let contenu = `
-                <p>
-                    <label for="date">Choose a schedule for your class</label>
-                    <input type="date" id="date" name="date" required>
-                </p>
-                <p>
-                    <label for="time">At what time ?</label>
-                    <input type="time" id="time" name="time" required>
-                </p>
-                <p>
-                    <button onclick="secondStep()">Reserve your class</button>
-                </p>
-                `
-            baliseForm.innerHTML = contenu
+            <p>
+                <label for="language">Choose your language :</label>
+                <select name="language" id="language" required>
+                    <option></option>
+                    <option value="english">English</option>
+                    <option value="french">French</option>
+                    <option value="spanish">Spanish</option>
+                </select>
+            </p>
+            `
+            baliseSection.innerHTML = contenu
+            chooseYourLanguage()
         })
     },
     onError: function (err){

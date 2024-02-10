@@ -13,6 +13,8 @@
         <link href="../style/nav.css" rel="stylesheet">
         <!--Client ID Live : ATecrMoU7ipg_Jz5Tom2fLVMDN_oEdpmTWcK4uZs1fi4G7bvx5fQZyouw_ExH9jNw2FUGvq3R3eV7EuU-->
         <!--Client ID Sandbox : AfMIDAWqa_pSP2k1YSFKAVTcf2OfgSa5XFCNddL_YGysLum6lzJjS3CTbrCBiA5l9_br9AB3fr7DyKJH-->
+        <!--Sandbox account email : sb-6varj29523569@personal.example.com-->
+        <!--Sandbox account password : g&I%LBX7-->
         <script src="https://www.paypal.com/sdk/js?client-id=ATecrMoU7ipg_Jz5Tom2fLVMDN_oEdpmTWcK4uZs1fi4G7bvx5fQZyouw_ExH9jNw2FUGvq3R3eV7EuU&currency=EUR"></script>
         <script src="../scripts/functions.js" defer></script>
         <script src="../scripts/main.js" defer></script>
@@ -32,25 +34,6 @@
                         <option value="lesson">Lesson</option>
                     </select>
                 </p>
-            <!--<p>
-                    <label for="language">Choose your language :</label>
-                    <select name="language" id="language" required>
-                        <option></option>
-                        <option value="english">English</option>
-                        <option value="french">French</option>
-                        <option value="spanish">Spanish</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="teacher">Choose your teacher :</label>
-                    <select name="teacher" id="teacher" required>
-                        <option></option>
-                        <option value="Greg">Greg</option>
-                    </select>
-                </p>
-                <p>
-                    <button onclick="firstStep()"> Go ! </button>
-                </p>-->
             </section>
         </main>
     </body>
