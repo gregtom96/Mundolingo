@@ -80,7 +80,6 @@ include('db_local.php');
 	<body>
 		<main>
 			<div class="left_element">
-				<img src="../images/logo.png" alt="logo_website">
 				<h1>Mundolingo</h1>
 				<h2>Travel. Communicate. Share.</h2>
 			</div>
