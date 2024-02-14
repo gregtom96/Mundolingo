@@ -27,7 +27,7 @@ paypal.Buttons({
             </p>
             `
             baliseSection.innerHTML = contenu
-            chooseYourLanguage()
+            chooseYourTeacher()
         })
     },
     onError: function (err){

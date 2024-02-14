@@ -1,9 +1,16 @@
-//Variable globale
+//Variables globales
 let teacherName = "Greg"
+let languageSelected = "none"
 
-function openEmail(teacherEmail, classDate, classTime){
-    let mailto = `mailto:${teacherEmail}?subject=Appointment for English class&body=Hi ! I would like to have a class with you on ${classDate} at ${classTime} Thank you for your confirmation !`
-    location.href = mailto
+function openEmail(teacherEmail, classDate, classTime, languageSelected){
+    if(languageSelected !== "none"){ //dans le cas d'un cours normal
+        let mailto = `mailto:${teacherEmail}?subject=Appointment for English class&body=Hi ! I would like to have a ${languageSelected} class with you on ${classDate} at ${classTime} Thank you for your confirmation !`
+        location.href = mailto
+    }
+    else{ //dans le cas d'un cours d'introduction
+        let mailto = `mailto:${teacherEmail}?subject=Appointment for English class&body=Hi ! I would like to have an introduction class with you on ${classDate} at ${classTime} Thank you for your confirmation !`
+        location.href = mailto
+    }
 }
 
 function getTeacherEmail(teacherName){
@@ -16,7 +23,7 @@ function getTeacherEmail(teacherName){
     return teacherEmail
 }
 
-function studentOrTeacher(){
+function teacherRegister(){
     let radios = document.querySelectorAll('input[type="radio"][name="profile"]')
 
     radios.forEach(function(radio) {
@@ -95,35 +102,32 @@ function chooseYourClass(){
             baliseSection.appendChild(baliseScript)
         }
 
-        //Si l'utilisateur a selectionné "introduction", on affiche la suite
+        //Si l'utilisateur a selectionné "introduction", on ne laisse pas choisir la langue
         else if(classSelected==="introduction"){
             let contenu = `
             <p>
-                <label for="language">Choose your language :</label>
-                <select name="language" id="language" required>
+                <label for="teacher">Choose your teacher :</label>
+                <select name="teacher" id="teacher" required>
                     <option></option>
-                    <option value="english">English</option>
-                    <option value="french">French</option>
-                    <option value="spanish">Spanish</option>
+                    <option value="Greg">Greg</option>
                 </select>
             </p>
             `
             baliseSection.innerHTML = contenu
-            chooseYourLanguage()
+            checkCalendar()
         }
     })
 }
 
-function chooseYourLanguage(){
-    console.log("dans la fonction chooseYourLanguage")
+function chooseYourTeacher(){
     let baliseLanguage = document.getElementById('language')
     let baliseSection = document.querySelector("section")
 
     baliseLanguage.addEventListener("change", function(){
-        let languageSelected = baliseLanguage.value
+        languageSelected = baliseLanguage.value
         console.log("vous avez choisi la langue suivante :", languageSelected)
 
-        //A TERME : récupérer tous les profs enseignant la langue choisie
+        //A TERME : récupérer dans la bdd tous les profs enseignant la langue choisie
 
         let contenu = `
         <p>
@@ -135,11 +139,11 @@ function chooseYourLanguage(){
         </p>
         `
         baliseSection.innerHTML = contenu
-        chooseYourTeacher()
+        checkCalendar()
     })
 }
 
-function chooseYourTeacher(){
+function checkCalendar(){
     let baliseTeacher = document.getElementById('teacher')
     let baliseSection = document.querySelector("section")
 
@@ -194,5 +198,5 @@ function reserveYourClass(teacherName){
     console.log(TimeSelected)
 
     let teacherEmail = getTeacherEmail(teacherName)
-    openEmail(teacherEmail, DateSelected, TimeSelected)
+    openEmail(teacherEmail, DateSelected, TimeSelected, languageSelected)
 }

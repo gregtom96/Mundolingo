@@ -1,5 +1,5 @@
-studentOrTeacher()
+teacherRegister()
 chooseYourClass()
-//chooseYourLanguage() //appelé dans chooseYourClass()
-//chooseYourTeacher()  //appelé dans chooseYourLanguage()
-//reserveYourClass  //appelé dans chooseYourTeacher()
+//chooseYourTeacher()  //appelé dans paiement.js
+//checkCalendar() //appelé dans chooseYourClass() et chooseYourTeacher()
+//reserveYourClass  //appelé dans checkCalendar()
